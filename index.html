@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercice 4</title>
+      <script src="jquery-3.2.1.js"></script>
+  </head>
+     <body>
+          <input type="button" name="up" value="Augmentez" class="up">
+          <input type="button" name="green" value="Changer couleur" class="green">
+          <input type="button" name="init" value="Initialiser" class="init">
+          <input type="button" name="hide" value="Cacher" class="hide">
+          <input type="button" name="show" value="Montrer" class="show">
+          <div class="rectangle"></div>
+
+    <script>
+  var taille = 10;
+    $('.up').click(function(){
+    taille = taille + 10;
+    $('.rectangle').css('height', taille);
+        if(taille == 100)
+         {
+           taille = 10;
+         }
+      })
+      $('.green').click(function(){
+        $('.rectangle').css('border','2px solid green').css('background-color','green');
+      })
+      $('.init').click(function(){
+        $('.rectangle').css('border','2px solid black').css('background-color','black');
+      })
+      $('.hide').click(function(){
+        $('.rectangle').hide();
+      })
+      $('.show').click(function(){
+        $('.rectangle').show();
+      })
+</script>
+  </body>
+</html>
